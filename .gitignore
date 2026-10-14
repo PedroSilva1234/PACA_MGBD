@@ -26,6 +26,7 @@ data/applications/jmeint/
 data/applications/kmeans/
 data/applications/sobel/
 
+
 # 5. Ignorar binários, executáveis e arquivos de dados dentro da pasta do SGD
 data/applications/SGD/src/*.exe
 data/applications/SGD/src/SGD_ex
@@ -51,3 +52,4 @@ storage/*
 storage/executions/*
 !storage/executions/sgd_sscad2026/
 storage/executions/sgd_sscad2026/graficos_retas/
+storage/executions/sgd_sscad2026/logs/*.log
