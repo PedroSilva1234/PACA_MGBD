@@ -1,0 +1,115 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import re
+import os
+
+from dataclasses import dataclass
+
+@dataclass
+class ParametrosReta:
+    m: float
+    b: float
+    identificador: str = ""  # Adicionado para identificar a reta, se necessário
+
+
+def extrair_parametros(filepath):
+    """Extrai os parâmetros m e b do ficheiro .data usando regex."""
+    try:
+        with open(filepath, 'r') as f:
+            conteudo = f.read()
+        
+        # Regex atualizado para aceitar nan e inf (ignorando maiúsculas/minúsculas)
+        match = re.search(r"Reta com (?:FLOAT|DOUBLE)\s*:\s*y\s*=\s*([-+]?(?:\d*\.\d+|\d+|nan|inf))\s*x\s*\+\s*([-+]?(?:\d*\.\d+|\d+|nan|inf))", conteudo, re.IGNORECASE)
+        if match:
+            return float(match.group(1)), float(match.group(2))
+        return None, None
+    except Exception:
+        return None, None
+
+if __name__ == "__main__":
+    # 1. Dados originais
+    x = [1, 2, 3, 4, 5]
+    y = [2.5, 4.8, 5.9, 7.5, 5.0]
+
+
+
+    retas = [ ParametrosReta(m=0.779372, b=4.28135, identificador="Reta Variante 1"), 
+             ParametrosReta(m=0.655908, b=3.245652, identificador="Reta Variante 2"),
+             ParametrosReta(m=0.657933, b=3.256318, identificador="Reta Variante 3"),
+                ParametrosReta(m=0.785, b=2.85, identificador="Reta Variante 4"),
+                ParametrosReta(m=0.839994, b=4.070796, identificador="Reta Variante 5")
+                ParametrosReta(m=0.785, b=2.85, identificador="Reta Original")
+              ]  # Reta original
+
+    x_arr = np.array(x)
+
+    # 2. Caminhos dos diretórios
+    diretorio_saida = r"C:\Programas\LSCAD\IC_Dani\Docker_Gregorio\ILAC\storage\executions\sgd_forcabruta_20260716_144301\outputs"
+    
+    # Criamos uma pasta no mesmo nível da execução para guardar as imagens geradas
+    diretorio_imagens = os.path.join(os.path.dirname(diretorio_saida), "graficos_retas")
+    
+    if not os.path.exists(diretorio_imagens):
+        os.makedirs(diretorio_imagens)
+
+    if not os.path.exists(diretorio_saida):
+        print(f"Erro: O diretório {diretorio_saida} não foi encontrado.")
+    else:
+        # 3. Percorre todos os ficheiros .data na pasta
+        arquivos_data = [f for f in os.listdir(diretorio_saida) if f.endswith('.data')]
+        print(f"Gerando gráficos individuais para {len(arquivos_data)} ficheiros. Aguarde...")
+
+        for arquivo in arquivos_data:
+            caminho_completo = os.path.join(diretorio_saida, arquivo)
+            
+            # Extrai os parâmetros
+            m, b = extrair_parametros(caminho_completo)
+            m_ref = 0.785
+            b_ref = 2.85
+            
+            if m is not None and b is not None and not (np.isnan(m) or np.isinf(m) or np.isnan(b) or np.isinf(b)):
+                
+                # --- INÍCIO DA CRIAÇÃO DO GRÁFICO INDIVIDUAL ---
+                plt.figure(figsize=(8, 5))
+                
+                # Plota sempre os pontos base (Originais)
+                plt.scatter(x, y, color='blue', label='Dados Originais', zorder=5)
+                
+                # Calcula a reta específica deste arquivo
+                y_reta = m * x_arr + b
+                
+                # Plota a reta (desta vez forte e visível, já que está sozinha)
+
+                for i in range(len(retas)):
+                    plt.plot(x_arr, retas[i].m * x_arr + retas[i].b, label=f'{retas[i].identificador}: y = {retas[i].m:.2f}x + {retas[i].b:.2f}', linestyle='--', alpha=0.7)   
+                    
+                
+                # Plota a reta original
+                y_reta_ref = m_ref * x_arr + b_ref
+                plt.plot(x_arr, y_reta_ref, color='green', label=f'Reta Original: y={m_ref:.2f}x + {b_ref:.2f}', linestyle='--')
+                
+                # Configurações do plot
+                hash_nome = arquivo.replace('.data', '').replace('sgd_', '')
+                plt.title(f"Ajuste - Variante {hash_nome}")
+                plt.xlabel("X")
+                plt.ylabel("Y")
+                plt.grid(True, linestyle='--', alpha=0.5)
+                plt.legend()
+                
+                # Limites fixos para que todos os gráficos tenham a mesma escala de visão e não fiquem "dançando"
+                plt.xlim(min(x) - 1, max(x) + 1)
+                plt.ylim(min(y) - 5, max(y) + 5) 
+                
+                # --- SALVA O GRÁFICO ---
+                nome_imagem = f"grafico_melhoresretas.png"
+                caminho_imagem = os.path.join(diretorio_imagens, nome_imagem)
+                
+                plt.savefig(caminho_imagem, bbox_inches='tight')
+                
+                # MUITO IMPORTANTE: Limpa a memória para o próximo gráfico!
+                plt.close()
+                
+            else:
+                print(f"Ignorado {arquivo}: Valores inválidos.")
+
+        print(f"\nConcluído! Todos os gráficos foram salvos na pasta:\n{diretorio_imagens}")

@@ -1,0 +1,326 @@
+{
+  "core": "Sifive-e24",
+  "freq": 125,
+  "power": 0,
+  "insns": {
+    "addi": {
+      "cycles": 1,
+      "power": 2.90491842765124
+    },
+    "sw": {
+      "cycles": 1,
+      "power": 1.68508149616007
+    },
+    "li": {
+      "cycles": 1,
+      "power": 1.78153906313757
+    },
+    "lw": {
+      "cycles": 1,
+      "power": 2.55944675945889
+    },
+    "jal": {
+      "cycles": 2,
+      "power": 2.27234105284556
+    },
+    "mv": {
+      "cycles": 1,
+      "power": 1.58738251577357
+    },
+    "bge": {
+      "cycles": 2,
+      "power": 2.42193754848063
+    },
+    "add": {
+      "cycles": 1,
+      "power": 2.80050302071126
+    },
+    "j": {
+      "cycles": 2,
+      "power": 2.42111875221896
+    },
+    "ret": {
+      "cycles": 2,
+      "power": 1.8227127142048
+    },
+    "beqz": {
+      "cycles": 2,
+      "power": 2.62232419552682
+    },
+    "mul": {
+      "cycles": 1,
+      "power": 3.09445799540031
+    },
+    "bnez": {
+      "cycles": 2,
+      "power": 2.46742961031713
+    },
+    "bltu": {
+      "cycles": 2,
+      "power": 2.49500126115215
+    },
+    "blt": {
+      "cycles": 2,
+      "power": 2.49588627612914
+    },
+    "bltz": {
+      "cycles": 2,
+      "power": 2.49588627612914
+    },
+    "bne": {
+      "cycles": 2,
+      "power": 2.46742961031713
+    },
+    "bgeu": {
+      "cycles": 2,
+      "power": 2.42193754848063
+    },
+    "sltu": {
+      "cycles": 1,
+      "power": 2.43164329295233
+    },
+    "slli": {
+      "cycles": 1,
+      "power": 2.56255071559939
+    },
+    "srai": {
+      "cycles": 1,
+      "power": 2.79271137464731
+    },
+    "sub": {
+      "cycles": 1,
+      "power": 2.86561970961471
+    },
+    "or": {
+      "cycles": 1,
+      "power": 2.80842297521789
+    },
+      "beq": {
+      "cycles": 2,
+      "power": 2.62232419552682
+    },
+     "andi": {
+      "cycles": 1,
+      "power": 2.90491842765124
+    },
+    "srli": {
+      "cycles": 1,
+      "power": 2.56255071559939
+    },
+     "xori": {
+      "cycles": 1,
+      "power": 2.90491842765124
+    },
+     "sltiu": {
+      "cycles": 1,
+      "power": 2.90491842765124
+    },
+     "lbu": {
+      "cycles": 1,
+      "power": 2.55944675945889
+    },
+    "lh": {
+      "cycles": 1,
+      "power": 2.55944675945889
+    },
+     "lhu": {
+      "cycles": 1,
+      "power": 2.55944675945889
+    },
+    "ori": {
+      "cycles": 1,
+      "power": 2.90491842765124
+    },
+     "jalr": {
+      "cycles": 2,
+      "power": 2.27234105284556
+    },
+     "and": {
+      "cycles": 1,
+      "power": 2.66000000000000
+    },
+     "sll": {
+      "cycles": 1,
+      "power": 2.45813530865941
+    },
+     "xor": {
+      "cycles": 1,
+      "power": 2.43164329295233
+    },
+     "sh": {
+      "cycles": 1,
+      "power": 1.68508149616007
+    },
+     "snez": {
+      "cycles": 1,
+      "power": 2.43164329295233
+    },
+     "blez": {
+      "cycles": 2,
+      "power": 2.42193754848063
+    },
+     "neg": {
+      "cycles": 1,
+      "power": 2.86561970961471
+    },
+     "jr": {
+      "cycles": 2,
+      "power": 2.27234105284556
+    },
+    "lui": {
+      "cycles": 2,
+      "power": 2.27234105284556
+    },
+    "epc": {
+      "cycles": 1,
+      "power": 1.82271271420480
+    },
+    "csrw": {
+      "cycles": 1,
+      "power": 1.68508149616007
+    },
+    "csrrw": {
+      "cycles": 1,
+      "power": 2.55944675945889
+    },
+    "csrr": {
+      "cycles": 1,
+      "power": 2.55944675945889
+    },
+    "auipc": {
+      "cycles": 1,
+      "power": 2.27234105284556
+    },
+    "fence": {
+      "cycles": 1,
+      "power": 2.90491842765124
+    },
+    "sfence.vma": {
+      "cycles": 1,
+      "power": 1.82271271420480
+    },
+    "bgez": {
+      "cycles": 2,
+      "power": 2.42193754848063
+    },
+    "sneg": {
+      "cycles": 1,
+      "power": 2.86561970961471
+    },
+    "sret": {
+      "cycles": 2,
+      "power": 1.82271271420480
+    },
+    "sb": {
+      "cycles": 1,
+      "power": 1.82271271420480
+    },
+    "not": {
+      "cycles": 1,
+      "power": 2.90491842765124
+    },
+    "ecall": {
+      "cycles": 1,
+      "power": 1.82271271420480
+    },
+     "zext.b": {
+      "cycles": 1,
+      "power": 1.82271271420480
+    },
+     "addx": {
+      "cycles": 1,
+      "power": 2.41683410690000
+    },
+     "subx": {
+      "cycles": 1,
+      "power": 2.74526345300000
+    },
+     "mulx": {
+      "cycles": 1,
+      "power": 2.48794422800000
+    },
+    "divx": {
+      "cycles": 1,
+      "power": 2.48794422800000
+    },
+    "m_addx": {
+      "cycles": 1,
+      "power": 2.782299751
+    },
+     "m_subx": {
+      "cycles": 1,
+      "power": 2.846993177
+    },
+     "m_mulx": {
+      "cycles": 1,
+      "power": 3.074344016
+    },
+     "m_divx": {
+      "cycles": 1,
+      "power": 3.074344016
+    },
+    "addx_m": {
+      "cycles": 1,
+      "power": 2.782299751
+    },
+     "subx_m": {
+      "cycles": 1,
+      "power": 2.846993177
+    },
+     "mulx_m": {
+      "cycles": 1,
+      "power": 3.074344016
+    },
+     "divx_m": {
+      "cycles": 1,
+      "power": 3.074344016
+    },
+    "faddx.s": {
+      "cycles": 2,
+      "power": 3.185852236
+    },
+     "fsubx.s": {
+      "cycles": 2,
+      "power": 3.349336317
+    },
+     "fmulx.s": {
+      "cycles": 2,
+      "power": 3.520255415
+    },
+    "fdivx.s": {
+      "cycles": 2,
+      "power": 3.616802505
+    },
+
+     "fadd.s":
+    {
+      "cycles": 2,
+      "power": 3.360603625
+    },
+  
+    "fsub.s":
+    {
+      "cycles": 2,
+      "power": 3.438743652
+    },
+
+    "fmul.s":
+    {
+      "cycles": 2,
+      "power": 3.713349594
+
+    },
+
+    "fdiv.s":
+    {
+      "cycles": 2,
+      "power": 3.713349594
+    },
+
+    "div.s": {
+      "cycles": 1,
+      "power": 3.09445799
+    }
+
+  }
+}

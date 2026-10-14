@@ -1,11 +1,8 @@
 # .gitignore
+# 1. Ignorar pastas do editor de código e caches do Python
+.vscode/
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
-.env
-.venv
-env/
+*.pyc   
 venv/
 *.swp
 .DS_Store
@@ -15,3 +12,42 @@ storage/logs/
 storage/output/
 storage/prof5_results/
 codigos_modificados/
+# 4. Ignorar resultados em texto e planilhas geradas (preservando dependências)
+*.xlsx
+*.txt
+!requirements.txt
+# 6. Ignorar as outras aplicações em C (mantendo apenas a pasta SGD)
+data/applications/blackscholes/
+data/applications/fbench/
+data/applications/ffbench/
+data/applications/fft/
+data/applications/inversek2j/
+data/applications/jmeint/
+data/applications/kmeans/
+data/applications/sobel/
+
+# 5. Ignorar binários, executáveis e arquivos de dados dentro da pasta do SGD
+data/applications/SGD/src/*.exe
+data/applications/SGD/src/SGD_ex
+data/applications/SGD/src/SGD_ALT_ex
+data/applications/SGD/src/*.data
+
+# 7. Ignorar as outras aplicações em Python (mantendo apenas o SGD.py)
+src/apps/blackscholes.py
+src/apps/fft.py
+src/apps/inversek2j.py
+src/apps/jmeint.py
+src/apps/kmeans.py
+src/apps/sobel.py
+src/graficos_retas
+#arquivos de dados
+src/contador.py
+src/copia_erros.py
+src/plotar_grafico.py
+src/copia_erros_m_b.py
+#Configuração da Pasta storage
+storage/*
+!storage/executions/
+storage/executions/*
+!storage/executions/sgd_sscad2026/
+storage/executions/sgd_sscad2026/graficos_retas/

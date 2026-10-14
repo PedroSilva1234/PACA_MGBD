@@ -1,0 +1,440 @@
+{
+  "summary": {
+    "core": "Sifive-e24",
+    "freq_MHz": 125,
+    "Total_Inst_Log": 6395250,
+    "Total_Inst_Mapped": 3800951,
+    "Unmapped_Inst_Count": 48,
+    "cycles": 7057913,
+    "IPC": 0.5385375251862696,
+    "latency_ms": 56.46330400000001,
+    "energy_uW_s": 188.03520724839214,
+    "energy_total": 188.03520724839214,
+    "avg_power": 3330.2196989462773,
+    "power": 23504400.906049017,
+    "avg_power_cycle": 3330.2196989462773
+  },
+  "detailed": {
+    "xori": {
+      "count": 5,
+      "cycles_per_inst": 1,
+      "power_val": 2.90491842765124,
+      "total_cycles": 5,
+      "total_energy_contribution": 14.5245921382562
+    },
+    "fmul.s": {
+      "count": 400000,
+      "cycles_per_inst": 2,
+      "power_val": 3.713349594,
+      "total_cycles": 800000,
+      "total_energy_contribution": 2970679.6752
+    },
+    "fadd.s": {
+      "count": 800000,
+      "cycles_per_inst": 2,
+      "power_val": 3.360603625,
+      "total_cycles": 1600000,
+      "total_energy_contribution": 5376965.8
+    },
+    "ecall": {
+      "count": 11,
+      "cycles_per_inst": 1,
+      "power_val": 1.8227127142048,
+      "total_cycles": 11,
+      "total_energy_contribution": 20.049839856252802
+    },
+    "lh": {
+      "count": 29,
+      "cycles_per_inst": 1,
+      "power_val": 2.55944675945889,
+      "total_cycles": 29,
+      "total_energy_contribution": 74.22395602430781
+    },
+    "sret": {
+      "count": 27,
+      "cycles_per_inst": 2,
+      "power_val": 1.8227127142048,
+      "total_cycles": 54,
+      "total_energy_contribution": 98.4264865670592
+    },
+    "lhu": {
+      "count": 10063,
+      "cycles_per_inst": 1,
+      "power_val": 2.55944675945889,
+      "total_cycles": 10063,
+      "total_energy_contribution": 25755.71274043481
+    },
+    "sfence.vma": {
+      "count": 51,
+      "cycles_per_inst": 1,
+      "power_val": 1.8227127142048,
+      "total_cycles": 51,
+      "total_energy_contribution": 92.95834842444481
+    },
+    "sltu": {
+      "count": 13,
+      "cycles_per_inst": 1,
+      "power_val": 2.43164329295233,
+      "total_cycles": 13,
+      "total_energy_contribution": 31.611362808380292
+    },
+    "csrrw": {
+      "count": 55,
+      "cycles_per_inst": 1,
+      "power_val": 2.55944675945889,
+      "total_cycles": 55,
+      "total_energy_contribution": 140.76957177023894
+    },
+    "mul": {
+      "count": 131,
+      "cycles_per_inst": 1,
+      "power_val": 3.09445799540031,
+      "total_cycles": 131,
+      "total_energy_contribution": 405.37399739744063
+    },
+    "jr": {
+      "count": 33,
+      "cycles_per_inst": 2,
+      "power_val": 2.27234105284556,
+      "total_cycles": 66,
+      "total_energy_contribution": 149.97450948780696
+    },
+    "and": {
+      "count": 3862,
+      "cycles_per_inst": 1,
+      "power_val": 2.66,
+      "total_cycles": 3862,
+      "total_energy_contribution": 10272.92
+    },
+    "beq": {
+      "count": 7640,
+      "cycles_per_inst": 2,
+      "power_val": 2.62232419552682,
+      "total_cycles": 15280,
+      "total_energy_contribution": 40069.113707649805
+    },
+    "srai": {
+      "count": 595,
+      "cycles_per_inst": 1,
+      "power_val": 2.79271137464731,
+      "total_cycles": 595,
+      "total_energy_contribution": 1661.6632679151494
+    },
+    "snez": {
+      "count": 66,
+      "cycles_per_inst": 1,
+      "power_val": 2.43164329295233,
+      "total_cycles": 66,
+      "total_energy_contribution": 160.4884573348538
+    },
+    "auipc": {
+      "count": 3120,
+      "cycles_per_inst": 1,
+      "power_val": 2.27234105284556,
+      "total_cycles": 3120,
+      "total_energy_contribution": 7089.704084878147
+    },
+    "ret": {
+      "count": 4333,
+      "cycles_per_inst": 2,
+      "power_val": 1.8227127142048,
+      "total_cycles": 8666,
+      "total_energy_contribution": 15795.628381298797
+    },
+    "fmulx.s": {
+      "count": 500000,
+      "cycles_per_inst": 2,
+      "power_val": 3.520255415,
+      "total_cycles": 1000000,
+      "total_energy_contribution": 3520255.415
+    },
+    "bne": {
+      "count": 7838,
+      "cycles_per_inst": 2,
+      "power_val": 2.46742961031713,
+      "total_cycles": 15676,
+      "total_energy_contribution": 38679.42657133133
+    },
+    "blt": {
+      "count": 139,
+      "cycles_per_inst": 2,
+      "power_val": 2.49588627612914,
+      "total_cycles": 278,
+      "total_energy_contribution": 693.8563847639009
+    },
+    "bgeu": {
+      "count": 2371,
+      "cycles_per_inst": 2,
+      "power_val": 2.42193754848063,
+      "total_cycles": 4742,
+      "total_energy_contribution": 11484.827854895148
+    },
+    "addi": {
+      "count": 5314,
+      "cycles_per_inst": 1,
+      "power_val": 2.90491842765124,
+      "total_cycles": 5314,
+      "total_energy_contribution": 15436.73652453869
+    },
+    "bgez": {
+      "count": 1608,
+      "cycles_per_inst": 2,
+      "power_val": 2.42193754848063,
+      "total_cycles": 3216,
+      "total_energy_contribution": 7788.951155913706
+    },
+    "jal": {
+      "count": 3170,
+      "cycles_per_inst": 2,
+      "power_val": 2.27234105284556,
+      "total_cycles": 6340,
+      "total_energy_contribution": 14406.64227504085
+    },
+    "li": {
+      "count": 303,
+      "cycles_per_inst": 1,
+      "power_val": 1.78153906313757,
+      "total_cycles": 303,
+      "total_energy_contribution": 539.8063361306837
+    },
+    "csrr": {
+      "count": 200136,
+      "cycles_per_inst": 1,
+      "power_val": 2.55944675945889,
+      "total_cycles": 200136,
+      "total_energy_contribution": 512237.4366510644
+    },
+    "j": {
+      "count": 120,
+      "cycles_per_inst": 2,
+      "power_val": 2.42111875221896,
+      "total_cycles": 240,
+      "total_energy_contribution": 581.0685005325504
+    },
+    "csrw": {
+      "count": 200126,
+      "cycles_per_inst": 1,
+      "power_val": 1.68508149616007,
+      "total_cycles": 200126,
+      "total_energy_contribution": 337228.6195005302
+    },
+    "fence": {
+      "count": 179,
+      "cycles_per_inst": 1,
+      "power_val": 2.90491842765124,
+      "total_cycles": 179,
+      "total_energy_contribution": 519.980398549572
+    },
+    "ori": {
+      "count": 1825,
+      "cycles_per_inst": 1,
+      "power_val": 2.90491842765124,
+      "total_cycles": 1825,
+      "total_energy_contribution": 5301.476130463513
+    },
+    "andi": {
+      "count": 7524,
+      "cycles_per_inst": 1,
+      "power_val": 2.90491842765124,
+      "total_cycles": 7524,
+      "total_energy_contribution": 21856.60624964793
+    },
+    "bnez": {
+      "count": 100870,
+      "cycles_per_inst": 2,
+      "power_val": 2.46742961031713,
+      "total_cycles": 201740,
+      "total_energy_contribution": 497779.24958537775
+    },
+    "add": {
+      "count": 160,
+      "cycles_per_inst": 1,
+      "power_val": 2.80050302071126,
+      "total_cycles": 160,
+      "total_energy_contribution": 448.08048331380155
+    },
+    "slli": {
+      "count": 5092,
+      "cycles_per_inst": 1,
+      "power_val": 2.56255071559939,
+      "total_cycles": 5092,
+      "total_energy_contribution": 13048.508243832093
+    },
+    "or": {
+      "count": 18344,
+      "cycles_per_inst": 1,
+      "power_val": 2.80842297521789,
+      "total_cycles": 18344,
+      "total_energy_contribution": 51517.71105739698
+    },
+    "beqz": {
+      "count": 2367,
+      "cycles_per_inst": 2,
+      "power_val": 2.62232419552682,
+      "total_cycles": 4734,
+      "total_energy_contribution": 12414.082741623966
+    },
+    "lui": {
+      "count": 732,
+      "cycles_per_inst": 2,
+      "power_val": 2.27234105284556,
+      "total_cycles": 1464,
+      "total_energy_contribution": 3326.7073013658996
+    },
+    "sll": {
+      "count": 21,
+      "cycles_per_inst": 1,
+      "power_val": 2.45813530865941,
+      "total_cycles": 21,
+      "total_energy_contribution": 51.62084148184761
+    },
+    "fsubx.s": {
+      "count": 1000000,
+      "cycles_per_inst": 2,
+      "power_val": 3.349336317,
+      "total_cycles": 2000000,
+      "total_energy_contribution": 6698672.634000001
+    },
+    "bltu": {
+      "count": 25037,
+      "cycles_per_inst": 2,
+      "power_val": 2.49500126115215,
+      "total_cycles": 50074,
+      "total_energy_contribution": 124934.69315093276
+    },
+    "fdiv.s": {
+      "count": 400000,
+      "cycles_per_inst": 2,
+      "power_val": 3.713349594,
+      "total_cycles": 800000,
+      "total_energy_contribution": 2970679.6752
+    },
+    "srli": {
+      "count": 10858,
+      "cycles_per_inst": 1,
+      "power_val": 2.56255071559939,
+      "total_cycles": 10858,
+      "total_energy_contribution": 27824.175669978176
+    },
+    "lbu": {
+      "count": 12667,
+      "cycles_per_inst": 1,
+      "power_val": 2.55944675945889,
+      "total_cycles": 12667,
+      "total_energy_contribution": 32420.512102065757
+    },
+    "sub": {
+      "count": 3013,
+      "cycles_per_inst": 1,
+      "power_val": 2.86561970961471,
+      "total_cycles": 3013,
+      "total_energy_contribution": 8634.11218506912
+    },
+    "bltz": {
+      "count": 323,
+      "cycles_per_inst": 2,
+      "power_val": 2.49588627612914,
+      "total_cycles": 646,
+      "total_energy_contribution": 1612.3425343794245
+    },
+    "sw": {
+      "count": 27466,
+      "cycles_per_inst": 1,
+      "power_val": 1.68508149616007,
+      "total_cycles": 27466,
+      "total_energy_contribution": 46282.44837353248
+    },
+    "sh": {
+      "count": 8297,
+      "cycles_per_inst": 1,
+      "power_val": 1.68508149616007,
+      "total_cycles": 8297,
+      "total_energy_contribution": 13981.1211736401
+    },
+    "bge": {
+      "count": 314,
+      "cycles_per_inst": 2,
+      "power_val": 2.42193754848063,
+      "total_cycles": 628,
+      "total_energy_contribution": 1520.9767804458356
+    },
+    "lw": {
+      "count": 23759,
+      "cycles_per_inst": 1,
+      "power_val": 2.55944675945889,
+      "total_cycles": 23759,
+      "total_energy_contribution": 60809.895557983764
+    },
+    "sb": {
+      "count": 790,
+      "cycles_per_inst": 1,
+      "power_val": 1.8227127142048,
+      "total_cycles": 790,
+      "total_energy_contribution": 1439.943044221792
+    },
+    "jalr": {
+      "count": 40,
+      "cycles_per_inst": 2,
+      "power_val": 2.27234105284556,
+      "total_cycles": 80,
+      "total_energy_contribution": 181.7872842276448
+    },
+    "not": {
+      "count": 114,
+      "cycles_per_inst": 1,
+      "power_val": 2.90491842765124,
+      "total_cycles": 114,
+      "total_energy_contribution": 331.1607007522414
+    }
+  },
+  "unmapped": [
+    "c.fsdsp",
+    "fcvt.d.s",
+    "mulhu",
+    "remu",
+    "fsgnj.s",
+    "fence.i",
+    "fnmsub.s",
+    "amoadd.w",
+    "sc.w",
+    "mret",
+    "csrrs",
+    "fsqrt.s",
+    "c.jr",
+    "c.sub",
+    "c.flwsp",
+    "flt.s",
+    "c.li",
+    "c.lw",
+    "c.addi4spn",
+    "c.slli",
+    "srl",
+    "c.srai",
+    "fmadd.s",
+    "c.swsp",
+    "c.fswsp",
+    "c.addi",
+    "c.srli",
+    "c.addi16sp",
+    "c.beqz",
+    "c.and",
+    "c.jal",
+    "flw",
+    "c.jalr",
+    "c.andi",
+    "lr.w",
+    "c.lwsp",
+    "c.add",
+    "c.lui",
+    "c.or",
+    "c.j",
+    "amoswap.w",
+    "c.mv",
+    "csrwi",
+    "seqz",
+    "c.bnez",
+    "c.sw",
+    "divu",
+    "fmv.w.x"
+  ]
+}

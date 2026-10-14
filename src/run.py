@@ -80,7 +80,8 @@ AVAILABLE_APPS = {
     "fft": "apps.fft",
     "jmeint": "apps.jmeint",
     "kmeans": "apps.kmeans",
-    "sobel": "apps.sobel"
+    "sobel": "apps.sobel",
+    "sgd": "apps.SGD"
 }
 
 def create_execution_workspace(app_name, execution_mode, base_config):

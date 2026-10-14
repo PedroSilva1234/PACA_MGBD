@@ -13,4 +13,5 @@ __all__ = [
     'FFTApp',
     'SobelApp',
     'KMeansApp',
+    'SGDApp',
 ]

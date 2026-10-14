@@ -183,6 +183,7 @@ def main():
     
     if modelo_path and instrucoes:
         res = avaliar_modelo_energia(instrucoes, modelo_path)
+        print(f"Resultados do modelo de energia ({modelo_path}):")
         if res:
             print(json.dumps(res["summary"], indent=2))
             
@@ -197,3 +198,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
